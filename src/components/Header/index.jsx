@@ -6,7 +6,7 @@ export default function Header() {
     <header>
       <h1>Little Lemon</h1>
       <h3>Chicago</h3>
-      <img src={image} alt='' />
+      {/* <img src={image} alt='' /> */}
       <p>
         We are a family owned Mediterranean restaurant, focused on traditional
         recipes served with modern twist.
