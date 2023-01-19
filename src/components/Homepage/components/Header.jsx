@@ -1,17 +1,25 @@
 import React from 'react';
 import image from 'assets/restauranfood.jpg';
+import * as Styled from '../styled';
 
-export default function Header() {
+export function Chicago() {
   return (
-    <header>
-      <h1>Little Lemon</h1>
-      <h3>Chicago</h3>
-      {/* <img src={image} alt='' /> */}
+    <Styled.Content>
+      <Styled.Title>Little Lemon</Styled.Title>
+      <Styled.Subtitle>Chicago</Styled.Subtitle>
       <p>
         We are a family owned Mediterranean restaurant, focused on traditional
         recipes served with modern twist.
       </p>
-      <button>Reserve a table</button>
-    </header>
+      <Styled.Button>Reserve a table</Styled.Button>
+    </Styled.Content>
+  );
+}
+export default function Header() {
+  return (
+    <Styled.HeaderContainer>
+      <Chicago />
+      <img src={image} alt='' />
+    </Styled.HeaderContainer>
   );
 }

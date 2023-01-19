@@ -88,7 +88,7 @@ const GlobalStyle = styled.createGlobalStyle`
     border: 0;
   }
   button {
-    background-color: #f4ce1c;
+    background-color: #f4ce14;
     border-radius: 10px;
     border: unset;
     padding: 10px 30px;
