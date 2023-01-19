@@ -1,19 +1,21 @@
 import React from 'react';
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import GlobalStyle from './global';
+import GlobalStyle from './core/global';
+import { Route, Routes } from 'react-router';
+import { ROUTES } from 'core/Routes';
+import { BrowserRouter } from 'react-router-dom';
+import Nav from 'components/Nav';
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyle />
       <Nav />
-      <Header />
-      <Main />
-      <Footer />
-    </>
+      <Routes>
+        {ROUTES.map((route, index) => (
+          <Route key={index} path={route.path} element={route.element} />
+        ))}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
