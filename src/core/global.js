@@ -88,7 +88,7 @@ const GlobalStyle = styled.createGlobalStyle`
     border: 0;
   }
   button {
-    background-color: #f4ce14;
+    background-color: ${(p) => p.theme.primary_yellow};
     border-radius: 10px;
     border: unset;
     padding: 10px 30px;
@@ -116,6 +116,19 @@ const GlobalStyle = styled.createGlobalStyle`
       color: #000;
       font-weight: 600;
     }
+  }
+  h1 {
+    font-size: 30pt;
+  }
+  h4,
+  h5,
+  h6 {
+    font-size: 14pt;
+  }
+  p {
+    font-size: 12pt;
+    line-height: 1.15;
+    max-width: 25ch;
   }
 `;
 

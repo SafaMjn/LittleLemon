@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-  background-color: #495e57;
+  background-color: ${(p) => p.theme.primary_green};
   color: white;
   display: flex;
   align-items: center;
@@ -9,22 +9,19 @@ export const HeaderContainer = styled.header`
   gap: 10%;
   padding: 0px 1%;
   height: 30vh;
-  * {
-    width: 220px;
-  }
+
   img {
     border-radius: 16px;
     transform: translateY(30px);
     height: 100%;
+    width: 240px;
   }
 `;
 
 export const Title = styled.h1`
-  font-size: 36px;
-  color: #f4ce14;
+  color: ${(p) => p.theme.primary_yellow};
 `;
-export const Subtitle = styled.h3`
-  font-size: 24px;
+export const Subtitle = styled.h4`
   font-weight: 500;
   margin-bottom: 10px;
 `;
@@ -49,15 +46,15 @@ export const MainContainer = styled.div`
   align-items: center;
   gap: 30px;
   min-width: 630px;
-  width: 33vw;
+  width: 38vw;
   height: 50vh;
   margin: auto;
-  padding-top: 3%;
+  padding-top: 40px;
 `;
 export const Section = styled.section`
   display: flex;
   flex-direction: column;
-  background-color: aliceblue;
+  background-color: ${(p) => p.theme.highlight};
   border-radius: 16px;
   width: 30%;
   padding-bottom: 10px;
@@ -78,20 +75,12 @@ export const Section = styled.section`
     height: 152px;
   }
   h6 {
-    color: orange;
-    font-size: medium;
-  }
-  h4 {
-    font-size: medium;
-  }
-
-  p {
-    font-size: smaller;
+    color: ${(p) => p.theme.secondary_orange};
   }
   a {
     text-decoration: none;
     font-weight: 600;
-    color: black;
+    color: ${(p) => p.theme.dark};
     margin-top: auto;
   }
 `;
