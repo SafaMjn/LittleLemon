@@ -25,10 +25,6 @@ export const Subtitle = styled.h4`
   font-weight: 500;
   margin-bottom: 10px;
 `;
-export const Button = styled.button`
-  width: fit-content;
-  margin: 10px 0;
-`;
 export const Content = styled.div`
   display: flex;
   flex-direction: column;

@@ -1,8 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { RESERVATIONS } from 'core/Routes';
 import image from 'assets/restauranfood.jpg';
 import * as Styled from '../styled';
 
 export function Chicago() {
+  const navigate = useNavigate();
   return (
     <Styled.Content>
       <Styled.Title>Little Lemon</Styled.Title>
@@ -11,7 +14,7 @@ export function Chicago() {
         We are a family owned Mediterranean restaurant, focused on traditional
         recipes served with modern twist.
       </p>
-      <Styled.Button>Reserve a table</Styled.Button>
+      <button onClick={() => navigate(RESERVATIONS)}>Reserve a table</button>
     </Styled.Content>
   );
 }

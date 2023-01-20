@@ -9,75 +9,11 @@ const GlobalStyle = styled.createGlobalStyle`
     height: 100%;
     overflow: auto;
   }
-  a,
-  abbr,
-  acronym,
-  address,
-  area,
-  b,
-  bdo,
-  big,
-  blockquote,
-  body,
-  button,
-  caption,
-  cite,
-  code,
-  col,
-  colgroup,
-  dd,
-  del,
-  dfn,
-  div,
-  dl,
-  dt,
-  em,
-  fieldset,
-  form,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  hr,
-  html,
-  i,
-  images,
-  ins,
-  kbd,
-  label,
-  legend,
-  li,
-  map,
-  object,
-  ol,
-  p,
-  param,
-  pre,
-  q,
-  samp,
-  small,
-  span,
-  strong,
-  sub,
-  sup,
-  table,
-  tbody,
-  td,
-  textarea,
-  tfoot,
-  th,
-  thead,
-  tr,
-  tt,
-  ul,
-  var {
+  * {
     margin: 0;
     padding: 0;
     vertical-align: baseline;
   }
-
   body {
     height: 100%;
     background: #fff;
@@ -87,20 +23,21 @@ const GlobalStyle = styled.createGlobalStyle`
   img {
     border: 0;
   }
-  button {
+  button,
+  input[type='submit'] {
     background-color: ${(p) => p.theme.primary_yellow};
     border-radius: 10px;
     border: unset;
-    padding: 10px 30px;
     font-weight: 600;
-    gap: 8px;
+    margin: 10px 0;
+    padding: 10px 30px;
+    width: fit-content;
     cursor: pointer;
     &:focus {
       outline: none;
       box-shadow: none;
     }
   }
-
   ul {
     display: flex;
     gap: 24px;
@@ -122,13 +59,19 @@ const GlobalStyle = styled.createGlobalStyle`
   }
   h4,
   h5,
-  h6 {
+  h6,
+  label {
     font-size: 14pt;
   }
   p {
     font-size: 12pt;
     line-height: 1.15;
     max-width: 25ch;
+  }
+  input,
+  select {
+    border-radius: 6px;
+    padding: 0 6px;
   }
 `;
 

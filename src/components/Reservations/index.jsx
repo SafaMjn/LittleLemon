@@ -1,5 +1,43 @@
-import React from 'react';
+import React, { useState, useMemo, useReducer } from 'react';
+import BookingForm from './components/BookingForm';
+import * as Styled from './styled';
+import { initialDate, bookingTimes, occasions } from './consts';
+import BookingContext from './components/BookingContext';
 
+export const initializeTimes = (state) => state;
+export const updateTimes = (state, data) =>
+  state.filter((time) => time !== data);
 export default function Reservations() {
-  return <div>Reservations</div>;
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case 'initialize_times': {
+        return initializeTimes(state);
+      }
+      case 'update_times': {
+        return updateTimes(state, action.data);
+      }
+      default:
+        return state;
+    }
+  };
+  const [availableTimes, dispatch] = useReducer(reducer, bookingTimes);
+  const [booking, setBooking] = useState({
+    reservationDate: initialDate,
+    reservationTime: bookingTimes[0],
+    guestsNumber: 1,
+    occasion: occasions[0],
+  });
+
+  const bookingContext = useMemo(
+    () => ({ booking, availableTimes, setBooking, dispatch }),
+    [availableTimes, booking]
+  );
+  return (
+    <BookingContext.Provider value={bookingContext}>
+      <Styled.BookingContainer>
+        <h1>Please fill out this form to make your reservation</h1>
+        <BookingForm />
+      </Styled.BookingContainer>
+    </BookingContext.Provider>
+  );
 }
