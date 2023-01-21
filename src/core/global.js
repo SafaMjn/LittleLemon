@@ -18,7 +18,7 @@ const GlobalStyle = styled.createGlobalStyle`
     height: 100%;
     background: #fff;
     color: #000;
-    overflow: hidden;
+    overflow: auto;
   }
   img {
     border: 0;
@@ -55,16 +55,16 @@ const GlobalStyle = styled.createGlobalStyle`
     }
   }
   h1 {
-    font-size: 30pt;
+    font-size: 24pt;
   }
   h4,
   h5,
   h6,
   label {
-    font-size: 14pt;
+    font-size: 12pt;
   }
   p {
-    font-size: 12pt;
+    font-size: 10pt;
     line-height: 1.15;
     max-width: 25ch;
   }

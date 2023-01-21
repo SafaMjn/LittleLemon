@@ -21,7 +21,9 @@ const setup = () => {
 
 test('Renders the BookingForm heading', () => {
   render(<BookingForm />);
-  const headingElement = screen.getByText('Book Now!');
+  const headingElement = screen.getByText(
+    'Please fill out this form to make your reservation'
+  );
   expect(headingElement).toBeInTheDocument();
 });
 

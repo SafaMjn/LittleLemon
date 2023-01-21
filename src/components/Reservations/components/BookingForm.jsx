@@ -29,10 +29,9 @@ export default function BookingForm() {
       occasion: Yup.string().required('Required'),
     }),
   });
-  console.log(formik);
+
   return (
     <Styled.Form onSubmit={formik.handleSubmit} data-testid='res-form'>
-      <p>Book Now!</p>
       <label htmlFor='res-date' data-testid='res-date-label'>
         Choose date
       </label>

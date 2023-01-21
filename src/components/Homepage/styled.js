@@ -28,7 +28,6 @@ export const Subtitle = styled.h4`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
 `;
 export const Headline = styled.div`
   display: flex;
@@ -43,7 +42,7 @@ export const MainContainer = styled.div`
   gap: 30px;
   min-width: 630px;
   width: 38vw;
-  height: 50vh;
+  min-height: 50vh;
   margin: auto;
   padding-top: 40px;
 `;
@@ -53,7 +52,7 @@ export const Section = styled.section`
   background-color: ${(p) => p.theme.highlight};
   border-radius: 16px;
   width: 30%;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   div,
   p,
   a {
@@ -68,7 +67,7 @@ export const Section = styled.section`
     border-top-right-radius: 16px;
     object-fit: cover;
     width: 100%;
-    height: 152px;
+    min-height: 152px !important;
   }
   h6 {
     color: ${(p) => p.theme.secondary_orange};

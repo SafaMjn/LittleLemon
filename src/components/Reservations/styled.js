@@ -10,7 +10,7 @@ export const Form = styled.form`
   input[type='date'],
   input[type='number'],
   select {
-    height: 40px;
+    height: 30px;
   }
   p {
     font-weight: 600;
@@ -29,7 +29,6 @@ export const BookingContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 20px;
   h1 {
     font-size: 18pt;
   }
