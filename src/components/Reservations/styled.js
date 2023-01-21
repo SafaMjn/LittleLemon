@@ -34,3 +34,7 @@ export const BookingContainer = styled.div`
     font-size: 18pt;
   }
 `;
+export const ErrorMessage = styled.p`
+  color: ${(p) => p.theme.secondary_orange};
+  width: 100% !important;
+`;

@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useReducer } from 'react';
 import BookingForm from './components/BookingForm';
 import * as Styled from './styled';
-import { initialDate, bookingTimes, occasions } from './consts';
+import { bookingTimes } from './consts';
 import BookingContext from './components/BookingContext';
 
 export const initializeTimes = (state) => state;
@@ -22,10 +22,10 @@ export default function Reservations() {
   };
   const [availableTimes, dispatch] = useReducer(reducer, bookingTimes);
   const [booking, setBooking] = useState({
-    reservationDate: initialDate,
-    reservationTime: bookingTimes[0],
-    guestsNumber: 1,
-    occasion: occasions[0],
+    reservationDate: '',
+    reservationTime: '',
+    guestsNumber: 0,
+    occasion: '',
   });
 
   const bookingContext = useMemo(
